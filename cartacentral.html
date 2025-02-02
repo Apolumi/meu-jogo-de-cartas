@@ -4,11 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carta Central - Jogo de Cartas</title>
-    <link rel="stylesheet" href="cartacentral.css">
+    <link rel="stylesheet" href="cartacentral.css"> <!-- Referência ao CSS externo -->
 </head>
 <body>
-    <div id="carta-central"></div>
 
-    <script src="cartacentral.js"></script>
+    <!-- Menu de navegação -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="index.html">Jogar</a></li>
+                <li><a href="cartas.html">Cartas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Carta central -->
+    <div id="carta-central" onclick="trocarCarta()"></div>
+
+    <script>
+        // Array com os tipos de cartas
+        const tiposCartas = ["morte", "facas", "sol", "lua"];
+        const cartaCentral = document.getElementById("carta-central");
+
+        // Função para gerar uma carta aleatória
+        function gerarCartaCentral() {
+            let tipoAleatorio = tiposCartas[Math.floor(Math.random() * tiposCartas.length)];
+            cartaCentral.style.backgroundImage = `url('img/${tipoAleatorio}.webp')`;
+        }
+
+        // Função para trocar a carta central
+        function trocarCarta() {
+            gerarCartaCentral();
+        }
+
+        // Inicializa a carta central
+        gerarCartaCentral();
+    </script>
+
 </body>
 </html>

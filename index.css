@@ -1,10 +1,105 @@
+/* Estilo do corpo */
 body {
-    background-color: #3b2a1d;
+    background-color: #0a0a0a; /* Preto mais intenso */
     color: #e4d8c5;
     text-align: center;
     font-family: Arial, sans-serif;
+    padding-top: 60px; /* Ajuste para evitar que o menu sobreponha o conteúdo */
+    margin: 0;
 }
 
+/* Menu de navegação */
+header {
+    background-color: #1a1a1a; /* Azul escuro */
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #e4d8c5;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+    color: #1e4a5f; /* Azul esverdeado */
+}
+
+/* Corpo do conteúdo */
+main {
+    margin-top: 80px; /* Espaço para o menu fixo */
+    padding: 20px;
+    max-width: 800px;
+    margin: 80px auto;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+}
+
+h1, h2 {
+    color: #d8c6a7;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* Links de navegação */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilo para o parágrafo e lista */
+p, ul {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #d0bda0;
+}
+
+/* HUD do jogador (Dinheiro e Controle) */
+#hud {
+    margin: 20px 0;
+}
+
+#dinheiro {
+    font-size: 20px;
+}
+
+button {
+    background-color: #1a1a1a;
+    color: #e4d8c5;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #1e4a5f; /* Azul esverdeado */
+}
+
+/* Deck de Cartas */
 #deck {
     display: flex;
     justify-content: center;
@@ -16,8 +111,8 @@ body {
 .card {
     width: 100px;
     height: 150px;
-    background-color: #4a3b2a;
-    border: 2px solid #a67f3e;
+    background-color: #1a1a1a;
+    border: 2px solid #1e4a5f;
     cursor: pointer;
     user-select: none;
     background-size: cover;
@@ -28,22 +123,7 @@ body {
     background: #222 url('img/carta_verso.webp') center/cover;
 }
 
-#hud {
-    margin-bottom: 20px;
-}
-
-button {
-    background-color: #4a3b2a;
-    color: #e4d8c5;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #a67f3e;
-}
-
+/* Seção de Comprar Cartas */
 #comprar {
     margin-top: 20px;
 }
@@ -53,15 +133,48 @@ button:hover {
     margin-bottom: 10px;
 }
 
+/* Cartas na loja */
 .lojaCarta {
     width: 100px;
     height: 150px;
-    background-color: #4a3b2a;
-    border: 2px solid #a67f3e;
+    background-color: #1a1a1a;
+    border: 2px solid #1e4a5f;
     cursor: pointer;
     user-select: none;
     background-size: cover;
     background-position: center;
     display: inline-block;
     margin: 10px;
+}
+
+/* Estilo para a mensagem de perda */
+.mensagem {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9); /* Mais escuro para o fundo da mensagem */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 20;
+}
+
+.mensagem p {
+    margin: 0;
+    font-size: 20px;
+}
+
+.mensagem button {
+    background-color: #1a1a1a;
+    color: #e4d8c5;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.mensagem button:hover {
+    background-color: #1e4a5f; /* Azul esverdeado */
 }
