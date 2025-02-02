@@ -1,6 +1,6 @@
 /* Corpo da página */
 body {
-    background-color: #3b2a1d;
+    background-color: #0a0a0a; /* Preto mais intenso */
     color: #e4d8c5;
     margin: 0;
     padding: 0;
@@ -9,14 +9,55 @@ body {
     align-items: center;
     height: 100vh; /* Ocupa a tela inteira */
     text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Menu de navegação */
+header {
+    background-color: #1a1a1a; /* Azul escuro */
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #e4d8c5; /* Texto claro */
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+    color: #1e4a5f; /* Azul esverdeado para o hover */
 }
 
 /* Carta central */
 #carta-central {
     width: 300px;
     height: 450px;
-    background-color: #4a3b2a;
-    border: 2px solid #a67f3e;
+    background-color: #1a1a1a; /* Azul escuro */
+    border: 2px solid #1e4a5f; /* Azul esverdeado */
     background-size: cover;
     background-position: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Efeito de hover na carta */
+#carta-central:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente a carta ao passar o mouse */
 }

@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
+    <!-- Menu de navegação -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">inicio</a></li>
+                <li><a href="cartacentral.html">Central</a></li>
+                <li><a href="cartas.html">Cartas</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <h1>cartas</h1>
 
     <!-- HUD do jogador (Dinheiro e Controle) -->
@@ -19,9 +31,23 @@
     <!-- Deck de Cartas -->
     <div id="deck"></div>
 
+    <!-- Mensagem de perda -->
+    <div id="mensagemPerda" class="mensagem" style="display:none;">
+        <p>Você perdeu!</p>
+        <button id="fecharMensagem">Fechar</button>
+    </div>
+
     <!-- Seção de Comprar Cartas -->
     <div id="comprar"></div>
 
-    <script src="index.js"></script>
+<!-- Adicione dentro do body ou no final -->
+<audio id="somGg" src="sons/gg.wav"></audio>
+<audio id="somPerdeu" src="sons/perdeu.wav"></audio>
+<audio id="somVirar" src="sons/virar.wav" preload="auto"></audio>
+<audio id="somX" src="sons/remover.wav" preload="auto"></audio>
+
+
+
+<script src="index.js"></script>
 </body>
 </html>
